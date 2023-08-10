@@ -7,6 +7,7 @@ export default function Home() {
 
   return (
     <>
+      <h2 className="text-center">Mode: {process.env.NEXT_PUBLIC_MODE}</h2>
       <div className="flex gap-4">
         <dia>
           <button
