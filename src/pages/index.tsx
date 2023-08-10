@@ -1,4 +1,4 @@
-import { signIn, useSession } from "next-auth/react";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
   const { data: session }: any = useSession();
@@ -26,11 +26,21 @@ export default function Home() {
         </dia>
       </div>
       {session && (
-        <div>
-          <h3>user:{session.user?.email}</h3>
-          <h3>name:{session.user?.name}</h3>
-          <h3>id:{session.user?.id}</h3>
-        </div>
+        <>
+          <div>
+            <h3>user:{session.user?.email}</h3>
+            <h3>name:{session.user?.name}</h3>
+            <h3>id:{session.user?.id}</h3>
+          </div>
+          <dia>
+            <button
+              className="bg-violet-500 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded"
+              onClick={() => signOut()}
+            >
+              signOut
+            </button>
+          </dia>
+        </>
       )}
     </>
   );
