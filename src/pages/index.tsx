@@ -4,6 +4,7 @@ export default function Home() {
   const { data: session }: any = useSession();
 
   console.log("test-session", session);
+  console.log("test-url", process.env.NEXTAUTH_URL);
 
   return (
     <>

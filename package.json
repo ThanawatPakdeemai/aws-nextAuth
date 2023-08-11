@@ -7,7 +7,7 @@
     "build:dev": "env-cmd -f .env.development next build",
     "start:dev": "env-cmd -f .env.development next start",
     "build:prod": "env-cmd -f .env.production next build",
-    "start:prod": "env-cmd -f .env.production next start",
+    "start:prod": "next start -p 3002",
     "lint": "next lint"
   },
   "dependencies": {
